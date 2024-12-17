@@ -36,7 +36,7 @@
     "lint": "biome lint",
     "test": "vitest",
     "build": "rm -rf out dist && tsc && rollup -c rollup.config.js",
-    "prepublish": "build"
+    "prepublish": "pnpm run build"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
