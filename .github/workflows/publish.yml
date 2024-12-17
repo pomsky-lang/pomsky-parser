@@ -16,7 +16,7 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 9
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -25,6 +25,8 @@ jobs:
 
       - run: pnpm install
 
-      - run: npm publish --provenance --access public
+      - run: |
+          pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+          pnpm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
