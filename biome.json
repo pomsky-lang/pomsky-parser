@@ -1,0 +1,16 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "linter": {
+    "ignore": ["out", "dist"],
+    "rules": {
+      "style": {
+        "noUselessElse": "off",
+        "noNonNullAssertion": "off",
+        "useEnumInitializers": "off"
+      },
+      "suspicious": {
+        "noConstEnum": "off"
+      }
+    }
+  }
+}

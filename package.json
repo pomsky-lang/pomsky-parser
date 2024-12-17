@@ -1,0 +1,45 @@
+{
+  "name": "@pomsky-lang/parser",
+  "version": "0.1.0",
+  "description": "JavaScript parser for the Pomsky regular expression language",
+  "collaborators": [
+    "Ludwig Stecher <ludwig.stecher@gmx.de>"
+  ],
+  "license": "MIT OR Apache-2.0",
+  "homepage": "https://pomsky-lang.org",
+  "type": "module",
+  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./rule": {
+      "require": "./dist/rule.js",
+      "import": "./dist/rule.mjs",
+      "types": "./dist/rule.d.ts"
+    },
+    "./tokenizer": {
+      "require": "./dist/tokenizer.js",
+      "import": "./dist/tokenizer.mjs",
+      "types": "./dist/tokenizer.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "biome lint",
+    "test": "vitest",
+    "build": "rm -rf out dist && tsc && rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "rollup": "^4.28.0",
+    "typescript": "~5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
