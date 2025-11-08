@@ -640,7 +640,7 @@ export class Parser {
       if (name !== undefined) {
         if (!/^[a-zA-Z0-9]*$/.test(name)) {
           throw new ParseError(ParseErrorKind.InvalidCharsInGroupName, this.lastSpan())
-        } else if (name.length > 32) {
+        } else if (name.length > 128) {
           throw new ParseError(ParseErrorKind.GroupNameTooLong, this.lastSpan())
         }
       }

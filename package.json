@@ -1,6 +1,6 @@
 {
   "name": "@pomsky-lang/parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JavaScript parser for the Pomsky regular expression language",
   "collaborators": [
     "Ludwig Stecher <ludwig.stecher@gmx.de>"
