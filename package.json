@@ -32,6 +32,10 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
   "scripts": {
     "lint": "biome lint",
     "test": "vitest",
